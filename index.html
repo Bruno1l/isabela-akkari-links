@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isabela Akkari - Links</title>
+    <!-- Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold-primary: #B98F3A;
+            --gold-hover: #AF9041;
+            --cream-bg: #FBF8F0;
+            --card-bg: #FFFFFF;
+            --text-dark: #282828;
+            --text-gold: #B98F3A;
+            --border-light: #EAE3D9;
+            --shadow-subtle: 0 10px 25px -5px rgba(185, 143, 58, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--cream-bg);
+            color: var(--text-dark);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 16px;
+            background-image: url('images/background.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-light);
+            border-radius: 28px;
+            padding: 40px 24px;
+            box-shadow: var(--shadow-subtle);
+            text-align: center;
+        }
+
+        /* Profile Header */
+        .profile-header {
+            margin-bottom: 24px;
+        }
+
+        .avatar-wrapper {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 6px;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid transparent;
+            padding: 3px;
+            background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, #CFB163, #F3A0B8) border-box;
+            box-shadow: 0 4px 12px rgba(185, 143, 58, 0.2);
+        }
+
+        .brand-logo {
+            display: block;
+            width: 80%;
+            max-width: 240px;
+            height: auto;
+            margin: 0 auto 4px;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* Banner Destaque SEDEX */
+        .sedex-badge {
+            background: #FFFDF9;
+            border: 1px dashed var(--gold-primary);
+            border-radius: 12px;
+            padding: 10px 14px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-gold);
+            font-weight: 500;
+        }
+
+        /* Links Section */
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            padding: 16px 20px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.25s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 8px 16px rgba(185, 143, 58, 0.15);
+            background: #FFFCF7;
+        }
+
+        .link-icon {
+            font-size: 18px;
+            color: var(--gold-primary);
+            width: 24px;
+        }
+
+        .link-text {
+            flex-grow: 1;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .link-arrow {
+            font-size: 12px;
+            color: #CCC;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .link-card:hover .link-arrow {
+            color: var(--gold-primary);
+            transform: translateX(3px);
+        }
+
+        /* iFood Highlight */
+        .link-card.featured {
+            background: linear-gradient(135deg, #B98F3A 0%, #AF9041 100%);
+            color: #FFFFFF;
+            border: none;
+            box-shadow: 0 6px 18px rgba(185, 143, 58, 0.35);
+        }
+
+        .link-card.featured .link-icon,
+        .link-card.featured .link-arrow {
+            color: #FFFFFF;
+        }
+
+        .link-card.featured:hover {
+            background: linear-gradient(135deg, #AF9041 0%, #96792F 100%);
+            box-shadow: 0 8px 22px rgba(185, 143, 58, 0.45);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 1px solid var(--border-light);
+            padding-top: 24px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--cream-bg);
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.25s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--gold-primary);
+            color: #FFFFFF;
+            border-color: var(--gold-primary);
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #999;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="profile-header">
+            <div class="avatar-wrapper">
+                <img id="avatar" class="avatar-img" src="images/8-1.jpg" alt="Isabela Akkari">
+            </div>
+            <img class="brand-logo" src="images/Logotipov2.png" alt="Isabela Akkari">
+            <p class="brand-subtitle">Doces Saudáveis & Experiências</p>
+        </div>
+
+        <!-- Tag Informativa / Sedex -->
+        <div class="sedex-badge">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Entregas para todo o Brasil</span>
+        </div>
+
+        <!-- Links Principais -->
+        <div class="links-wrapper">
+            
+            <!-- Peça agora pelo iFood -->
+            <a href="https://ifoodbr.onelink.me/F4X4/IsabelaAkkari" target="_blank" class="link-card featured">
+                <div class="link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                <span class="link-text">Peça agora pelo iFood</span>
+                <div class="link-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Faça sua encomenda -->
+            <a href="https://tinyurl.com/3stk9fj5" target="_blank" class="link-card">
+                <div class="link-icon"><i class="fa-solid fa-cake-candles"></i></div>
+                <span class="link-text">Faça sua encomenda</span>
+                <div class="link-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Catálogo de encomendas -->
+            <a href="https://qrco.de/bfgKlY" target="_blank" class="link-card">
+                <div class="link-icon"><i class="fa-solid fa-book-open"></i></div>
+                <span class="link-text">Catálogo de encomendas</span>
+                <div class="link-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Soluções corporativas -->
+            <a href="https://tinyurl.com/sakbd47w" target="_blank" class="link-card">
+                <div class="link-icon"><i class="fa-solid fa-building-user"></i></div>
+                <span class="link-text">Soluções Corporativas</span>
+                <div class="link-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+            <!-- Conheça a Isabela Akkari -->
+            <a href="https://isabelaakkari.com/" target="_blank" class="link-card">
+                <div class="link-icon"><i class="fa-solid fa-globe"></i></div>
+                <span class="link-text">Conheça a Isabela Akkari</span>
+                <div class="link-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </a>
+
+        </div>
+
+        <!-- Rodapé -->
+        <div class="footer">
+            <div class="social-links">
+                <a href="https://isabelaakkari.com/" target="_blank" class="social-btn" title="Site Oficial"><i class="fa-solid fa-globe"></i></a>
+                <a href="https://www.instagram.com/isabelaakkari" target="_blank" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© Isabela Akkari</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
